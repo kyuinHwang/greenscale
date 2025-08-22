@@ -87,6 +87,7 @@ This will open the GreenScale GUI. Once the GUI window appears, you can navigate
 
 - Click the *"GetAverage"* button to get average body weight values.
 - Check the *"exclude outliers"* checkbox if you want to exclude outliers from the body weight values estimated from multiple photographs.
+- Before save result, enter the name of the plant sample in the top-left field labeled "PutSampleName".
 - Click the *"SaveSampleData"* button to save the average body weight values per individual plant in csv file (Results.sample.txt).
 - Click the *"SavePhotoData"* button to save the body weight values per individual photos in csv file (Results.photo.txt).
 
