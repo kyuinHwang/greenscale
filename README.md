@@ -88,6 +88,7 @@ This will open the GreenScale GUI. Once the GUI window appears, you can navigate
 - Click the *"SavePhotoData"* button to save the results per individual photos in csv file (Results.photo.txt)
 
 *Close the main window and launch GreenScale again for the next plant*
+
 *Note:* If you have already sorted multiple photographs of each plant into separate directories (e.g. ./plant1/plant1_1stphoto.jpg, ./plant1/plant1_2ndphoto.jpg), you can use *'Load Dir'* button instead.
 
 ## License
@@ -104,4 +105,5 @@ For direct inquiries, you may contact the maintainer at: rbdls77@gmail.com
 ## Contribution
 
 Dr. Kyung Mo Kim (Korea Polar Research Institute; email: kmkim@kopri.re.kr) has designed the Software and developed its core algorithms.
+
 Dr. Kyuin Hwang (Korea Polar Research Institute; emalil: rbdls77@gmail.com) has developed GUI program
