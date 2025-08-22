@@ -425,7 +425,12 @@ def _getStat():
 def _savePhotos():
     global photoLogFN, gImages, entrySampleName
     sampleName = entrySampleName.get()
-    LOGFP = open(photoLogFN,'a')
+    if os.path.exists(photoLogFN):
+        LOGFP = open(photoLogFN,'a')
+    else:
+        LOGFP = open(photoLogFN,'a')
+        LOGFP.write('\t'.join(["SampleName","ImageFilePath","ResizeRatio","#GreenishPixel","CoinRadius","Scaled#GreenishPixel","FreshWeight","DryWeight","ProcessingDate"]) + '\n')
+
     if sampleName == "PutSampleName": sampleName = "Unknown"
     for gImage in gImages:
         if gImage.mossPixelN == None: continue
@@ -441,8 +446,12 @@ def _saveSample():
     global entryAvgFW, entryAvgDW, Nsample, entrySampleName
     
     sampleName = entrySampleName.get()
-    LOGFP = open(sampleLogFN,'a')
     if sampleName == "PutSampleName": sampleName = "Unknown"
+    if os.path.exists(sampleLogFN):
+        LOGFP = open(sampleLogFN,'a')
+    else:
+        LOGFP = open(sampleLogFN,'a')
+        LOGFP.write('\t'.join(["SampleName","#PhotographsIncludedInCalculation","IsExcludeOutlier","AverageFreshweight","AverageDryWeight"]) + '\n')
     wList = [sampleName,str(Nsample),str(excOutlier.get())]
     for entryTarget in [entryAvgPPU, entryStdevPPU,entryAvgFW, entryAvgDW]:
         targetValue = entryTarget.get()
